@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Tilaa pannukakku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+<div class="image-container">
+<img src="images/vecteezy_pancakes-image-hd_30625217.jpg" alt="Delicious pancakes" />
+<div class="price-banner"><span id="totalPrice">5.00€</span></div>
+</div>
+
+<div class="form-container">
+<h2>Muokkaa Pannukakkuasi</h2>
+
+<form id="pancakeForm">
+<!-- Asiakkaan nimi -->
+<label for="customerName">Sinun nimesi:</label>
+<input type="text" id="customerName" placeholder="Etunimi ja sukunimi" required />
+
+<!-- Pannukakun vaihehtot -->
+<label for="type">Valitse pannukakun tyyppi:</label>
+<select id="type">
+<option data-price="5">Klassinen 5€</option>
+<option data-price="6">Suklaa 6€</option>
+<option data-price="7">Mustikka 7€</option>
+</select>
+
+<!-- toppings -->
+<h3>Valitse täytteet (1€ / kpl):</h3>
+<label>
+ <input type="checkbox" class="topping" data-price="1" /> Pähkinät
+</label>
+<label>
+<input type="checkbox" class="topping" data-price="1" /> Banaani
+</label>
+<label>
+<input type="checkbox" class="topping" data-price="1" /> Siirappi
+</label>
+
+<!-- lisukkeet -->
+<h3>Valitse lisukkeet:</h3>
+<label>
+<input type="checkbox" class="extra" data-price="2" /> Kermavaahto
++ 2€</label
+>
+<label
+><input type="checkbox" class="extra" data-price="3" /> Jäätelö +
+3€</label
+>
+
+<!-- Toimitustapa -->
+<h3>Choose delivery method:</h3>
+<label><input
+type="radio"
+name="delivery"
+class="delivery"
+data-price="0"
+checked/>
+Syö täällä</label>
+<label>
+<input
+type="radio"
+name="delivery"
+class="delivery"
+data-price="0"
+/>
+Ota mukaan</label>
+<label>
+<input
+type="radio"
+name="delivery"
+class="delivery"
+data-price="5"
+/>
+Toimitus (+ 5€)</label>
+
+
+<!-- Kokonaishinnan näyttäminen -->
+<h3>Kokonaishinta: <span id="totalPriceDisplay">5.00€</span></h3>
+
+<!-- Tarkista tilaus -nappi -->
+<button type="button" id="seeOrder">Tarkista tilauksen tiedot</button>
+</form>
+
+<!-- Tilauksen yhteenvedon esittäminen -->
+<div id="orderSummary">
+<h3>Tilauksen yhteenveto</h3>
+<p id="summaryText">Tietosi tulevat tähän.</p>
+</div>
+<button type="button" id="submitOrder">Lähetä tilaus</button>
+<p><a href="orders.html">Kaikki tilaukset</a></p>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

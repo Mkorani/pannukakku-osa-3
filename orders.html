@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<title>Kaikki tilaukset</title>
+<link rel="stylesheet" href="orders.css">
+</head>
+
+<body>
+
+<header class="header">
+<h1>Kaikki tilaukset</h1>
+<p><a href="index.html">⬅ Takaisin etusivulle</a></p>
+
+
+<label for="statusFilter">Suodata tilan mukaan:</label>
+<select id="statusFilter">
+<option value="all">Kaikki</option>
+<option value="waiting"> 🟡 waiting</option>
+<option value="ready"> 🔵 ready</option>
+<option value="delivered"> 🟢 delivered</option>
+</select>
+
+<label for="searchInput">Hae asiakkaan nimellä tai ID:llä:</label>
+<input type="text" id="searchInput" placeholder="Haku...">
+</header>
+
+
+
+<main class="main-content">
+<div id="ordersList"></div>
+</main>
+
+<button id="scrollTopBtn" title="Palaa ylös">⬆</button>
+<script src="orders.js"></script>
+</body>
+</html>
