@@ -125,6 +125,4 @@ The project was challenging, interesting, and useful.
 I used artificial intelligence to help understand topics I am still learning, especially in JavaScript.
 HTML and CSS were mostly done independently.
 
-status – order status (default: "waiting")
 
-Example order object:
